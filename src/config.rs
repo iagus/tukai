@@ -66,6 +66,9 @@ pub enum TukaiLayoutName {
   Deadpool,
   Wolverine,
   Goblin,
+  NordLight,
+  TokyoNightDay,
+  GruvboxLight,
 }
 
 /// Display used in the Tukai paragraph block_title
@@ -80,6 +83,9 @@ impl Display for TukaiLayoutName {
       Deadpool => "🩸🔞 Deadpool",
       Wolverine => "💪🍺 Wolverine",
       Goblin => "🌳 Goblin",
+      NordLight => "❄ Nord Light",
+      TokyoNightDay => "🏙️ TokyoNight Light",
+      GruvboxLight => "☕ Gruvbox Light",
     };
 
     write!(f, "{display_text}")
@@ -193,6 +199,36 @@ impl TukaiLayout {
           (32, 36, 30),
           (117, 71, 56),
         )
+      },
+      NordLight => {
+        TukaiLayoutColors::new(
+          (94, 129, 172),
+          (46, 52, 64),
+          (236, 239, 244),
+          (94, 129, 172),
+          (236, 239, 244),
+          (191, 97, 106),
+        )
+      },
+      TokyoNightDay => {
+        TukaiLayoutColors::new(
+          (46, 125, 233),
+          (55, 96, 191),
+          (225, 226, 231),
+          (46, 125, 233),
+          (225, 226, 231),
+          (245, 42, 101),
+        )
+      },
+      GruvboxLight => {
+        TukaiLayoutColors::new(
+          (175, 58, 3),
+          (60, 56, 54),
+          (251, 241, 199),
+          (175, 58, 3),
+          (251, 241, 199),
+          (157, 0, 6),
+        )
       }
     };
 
@@ -203,7 +239,10 @@ impl TukaiLayout {
       (Deadpool, Wolverine),
       (Wolverine, Rust),
       (Rust, Goblin),
-      (Goblin, Iced),
+      (Goblin, NordLight),
+      (NordLight, TokyoNightDay),
+      (TokyoNightDay, GruvboxLight),
+      (GruvboxLight, Iced),
     ]);
 
     Self {
