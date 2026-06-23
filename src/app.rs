@@ -126,7 +126,7 @@ impl<'a> Tukai<'a> {
     self
       .storage_handler
       .flush()
-      .expect("Error occured while saving into the file");
+      .expect("Error occurred while saving into the file");
   }
 
   /// Switches active `screen`.

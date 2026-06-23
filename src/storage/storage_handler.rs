@@ -294,7 +294,7 @@ mod tests {
 
     storage_handler
       .delete_file()
-      .expect("Error occured while deleting file");
+      .expect("Error occurred while deleting file");
   }
 
   #[test]
@@ -310,7 +310,7 @@ mod tests {
 
     assert!(
       storage_handler.insert_into_stats(&stat),
-      "Insert into the storage error occured"
+      "Insert into the storage error occurred"
     );
 
     let _stats = storage_handler.get_data_stats_reversed();
@@ -328,7 +328,7 @@ mod tests {
     //
     // storage_handler
     //   .delete_file()
-    //   .expect("Error occured while deleting file");
+    //   .expect("Error occurred while deleting file");
   }
 
   #[test]
@@ -340,7 +340,7 @@ mod tests {
 
     storage_handler
       .delete_file()
-      .expect("Error occured while deleting file");
+      .expect("Error occurred while deleting file");
   }
 
   #[test]
@@ -355,6 +355,6 @@ mod tests {
 
     storage_handler
       .delete_file()
-      .expect("Error occured while deleting file");
+      .expect("Error occurred while deleting file");
   }
 }
